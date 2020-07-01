@@ -1,0 +1,10 @@
+
+<h1>Cars for sale</h1>
+<hr/>
+<div class="cars-list">
+		<article *ngFor="let car of cars">
+			<h2>{{car.modell}}</h2>
+			<img src={{car.imgsrc}} alt="Bild på bil">
+			<p>Välvårdad bil.<br/>Registreringsnummer: {{car.regnr}}<br/>Pris: 5kr</p>
+		</article>
+</div>

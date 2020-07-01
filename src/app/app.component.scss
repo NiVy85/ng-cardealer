@@ -1,0 +1,46 @@
+$primary: #5555aa;
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: $primary;
+    padding: 1em 0;
+
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    a.company {
+        font-size: 2em;
+        font-weight: bold;
+        text-shadow: 3px 3px 4px #000;
+    }
+
+    nav {
+        ul {
+            list-style-type: none;
+
+            li {
+                display: inline;
+            }
+            li a {
+                padding: 10px;
+                &:hover {
+                    background: lighten($primary, 10%);
+                }
+            }
+        }
+    }
+}
