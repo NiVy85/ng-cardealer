@@ -6,10 +6,10 @@ router.get('/', (req, res) => {
 
 const carsController = require('./carsController');
 
-router.route('/cars')
+router.route('/api/cars')
 	.get(carsController.index);
 
-router.route('/cars/:cars_id')
+router.route('/api/cars/:cars_id')
 	.get(carsController.view);
 
 module.exports = router;

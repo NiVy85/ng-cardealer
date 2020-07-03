@@ -9,6 +9,6 @@ export class HttpService {
     constructor(private http: HttpClient) { }
 
     getCars() {
-        return this.http.get('https://angular-cardealer.herokuapp.com/cars');
+        return this.http.get('https://angular-cardealer.herokuapp.com/api/cars');
     }
 }
