@@ -15,7 +15,6 @@ export class CarsComponent implements OnInit {
     ngOnInit(): void {
         this._http.getCars().subscribe(data => {
 					this.cars = data['data'].map(x => x);
-					console.log(this.cars);
 				});
     }
 
