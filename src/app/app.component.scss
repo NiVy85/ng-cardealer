@@ -1,5 +1,9 @@
 $primary: #5555aa;
 
+* {
+	overflow-x: hidden;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -15,7 +19,9 @@ $primary: #5555aa;
 header {
     background: $primary;
     padding: 1em 0;
-
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
 
     a {
         color: #fff;
@@ -44,9 +50,14 @@ header {
 							li {
 								display: block;
 								width: 100%;
+								margin: 20px 0;
 								text-align: center;
 								}
 						}
         }
     }
 }
+@media screen and (max-width: 600px);
+	header {
+		flex-direction: column;
+	}
