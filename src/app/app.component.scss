@@ -9,6 +9,7 @@ $primary: #5555aa;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+		flex-direction: row;
 }
 
 .main-container {
@@ -19,9 +20,6 @@ $primary: #5555aa;
 header {
     background: $primary;
     padding: 1em 0;
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
 
     a {
         color: #fff;
@@ -58,7 +56,7 @@ header {
     }
 }
 @media screen and (max-width: 600px) {
-	header {
+	.container {
 		flex-direction: column;
 	}
 }
