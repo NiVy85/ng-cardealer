@@ -31,7 +31,6 @@ header {
     nav {
         ul {
             list-style-type: none;
-
             li {
                 display: inline;
             }
@@ -40,14 +39,14 @@ header {
                 &:hover {
                     background: lighten($primary, 10%);
                 }
-            }
+							}
+						@media screen and (max-width: 600px) {
+							li {
+								display: block;
+								width: 100%;
+								text-align: center;
+								}
+						}
         }
     }
-		@media screen and (max-width: 600px) {
-			li {
-				display: block;
-				width: 100%;
-				text-align: center;
-			}
-		}
 }
