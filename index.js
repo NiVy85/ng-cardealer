@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // Connect to Database
 mongoose.connect(db_uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.use(express.static('./dist/angular-cardealer/'), apiRouter);
+app.use(express.static('./dist/ng-cardealer/'), apiRouter);
 
 
 app.listen((process.env.PORT || port), function () {
