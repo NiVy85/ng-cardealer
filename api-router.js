@@ -4,6 +4,13 @@ router.get('/', (req, res) => {
 	res.sendFile('index.html', {root: 'dist/angular-cardealer/'});
 });
 
+router.get('*', (req, res) => {
+	res.send('Your request: ' + req + ' is not allowed! Redirecting...');
+	setTimeout(() => {
+		res.sendFile('index.html', {root: 'dist/angular-cardeal'});
+	}, 5000);
+});
+
 const carsController = require('./carsController');
 
 router.route('/api/cars')
