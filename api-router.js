@@ -13,10 +13,8 @@ router.route('/api/cars/:cars_id')
 	.get(carsController.view);
 
 router.get('*', (req, res) => {
-	setTimeout(function() {
-		window.location.href="https://angular-cardealer.herokuapp.com";
-	}, 3000);
-	res.send("Custom requests not allowed, make sure the address ends with .com and nothing else. Redirecting in 3..2..");
+	setTimeout(res.redirect('https://angular-cardealer.herokuapp.com', 3000));
+	res.send("Error. Custom get not allowed. Redirecting in 3..2..");
 });
 
 module.exports = router;
