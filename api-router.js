@@ -1,10 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.json({
-    status: 'Working',
-    message: 'This is awesome!'
-  });
+	res.sendFile('index.html', {root: 'dist/angular-cardealer/'});
 });
 
 const carsController = require('./carsController');
