@@ -13,7 +13,7 @@ router.route('/api/cars/:cars_id')
 	.get(carsController.view);
 
 router.get('*', (req, res) => {
-	res.sendFile('index.html', {root: 'dist/angular-cardealer/'});
+	res.send("Custom requests not allowed, make sure the address ends with .com and nothing else.");
 });
 
 module.exports = router;
