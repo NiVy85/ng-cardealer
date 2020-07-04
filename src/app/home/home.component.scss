@@ -1,0 +1,21 @@
+._title {
+	text-align: center;
+}
+._intro-text {
+	margin: 0 auto;
+	width: fit-content;
+	background: rgb(240, 240, 240);
+	h2 {
+		padding: 10px 0 0 10px;
+		text-decoration: none;
+	}
+	p {
+		font-family: Times, "Times New Roman", serif;
+		padding: 0 10px 10px 10px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		max-width: 500px;
+	}
+}
+
+
