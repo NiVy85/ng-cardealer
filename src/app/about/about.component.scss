@@ -1,0 +1,23 @@
+._about {
+	width: 80%;
+}
+
+._article_left {
+	float: left;
+	line-height: 1.5;
+	max-width: 500px;
+}
+
+._article_right {
+	clear: both;
+	float: right;
+	max-width: 300px;
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	li {
+		padding: 5px 0;
+	}
+}
