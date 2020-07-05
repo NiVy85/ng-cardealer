@@ -63,20 +63,3 @@ header {
 	}
 }
 
-.lo-overlay {
-	left: 0;
-	top: 0;
-	z-index: 5000;
-	min-width: 100%;
-	min-height: 100%;
-	position: fixed;
-	background: rgba(0,0,0,0.8);
-	cursor: pointer;
-	visibility: visible;
-	transition: visibility 0s, opacity 0.4s linear;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: wait;
-	font-size: 100px;
-}

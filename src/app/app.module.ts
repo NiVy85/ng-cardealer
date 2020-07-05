@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { CarsComponent } from './cars/cars.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
     declarations: [
@@ -20,7 +20,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        FontAwesomeModule
+				NgHttpLoaderModule.forRoot(),
     ],
     providers: [],
     bootstrap: [AppComponent]

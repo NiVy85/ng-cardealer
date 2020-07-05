@@ -12,8 +12,6 @@
 </header>
 
 <div class="main-container">
-	<div class="lo-overlay" *ngIF="showOverlay">
-		<fa-icon [icon]="faSpinner"></fa-icon>
-	</div>
+	<ng-http-loader></ng-http-loader>
 	<router-outlet></router-outlet>
 </div>
