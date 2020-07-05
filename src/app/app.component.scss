@@ -1,4 +1,4 @@
-$primary: #5555aa;
+$primary: rgb(85, 85, 170);
 
 * {
 	overflow-x: hidden;
@@ -19,9 +19,11 @@ $primary: #5555aa;
 }
 
 .main-container {
+		position: relative;
 		grid-area: 2/1/3/2;
     width: 80%;
     margin: 0 auto;
+		overflow: hidden;
 }
 
 header {
