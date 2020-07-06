@@ -1,5 +1,3 @@
-const {element} = require('protractor');
-
 Cars = require('./carsModel');
 
 exports.index = (req, res) => {
