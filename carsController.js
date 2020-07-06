@@ -46,7 +46,7 @@ exports.delcar = (req, res) => {
 	staticCars = ["ARG678", "TTY199", "KLI082", "UUP123", "WLK131", "SLP764"];
 	for (const element of staticCars) {
 		if(element == car)
-			return {error: "error", message: "Not allowed to remove that car"};
+			res.send("Error: Not allowed to remove that car");
 		else {
 			Cars.find(car).remove((err) => {
 				if(err)
