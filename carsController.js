@@ -43,5 +43,14 @@ exports.addcar = (req, res, next) => {
 
 exports.delcar = (req, res) => {
 	let car = { regnr: req.body.regnrdel};
-	Cars.find(car).remove().exec();
+	Cars.find(car).remove((err) => {
+		if(err)
+			res.send(err)
+		else
+			res.json({
+				status: "success",
+				message: "Car has been removed successfully",
+				data: car
+			});
+	});
 }
