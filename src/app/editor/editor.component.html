@@ -1,4 +1,5 @@
-<div class="_addcar-form">
+<div class="_car-form">
+	<h2>Lägg till</h2>
 	<form action="/api/cars" method="POST">
 		<input type="text" placeholder="Regnr" name="regnr">
 		<input type="text" placeholder="Modell" name="modell">
@@ -6,7 +7,8 @@
 		<button type="submit">Lägg till</button>
 	</form>
 </div>
-<div class="_editcar-form">
+<div class="_car-form">
+	<h2>Uppdatera</h2>
 	<form action="/api/cars/update" method="POST">
 		<input type="text" placeholder="Regnr på bil som ska redigeras" name="regnr-toedit">
 		<select name="cars" id="cars">
@@ -18,7 +20,8 @@
 		<button type="submit">Ändra</button>
 	</form>
 </div>
-<div class="_delcar-form">
+<div class="_car-form">
+	<h2>Ta bort</h2>
 	<form action="/api/cars/del" method="POST">
 		<input type="text" placeholder="Regnr" name="regnrdel">
 		<button type="submit">Ta bort</button>

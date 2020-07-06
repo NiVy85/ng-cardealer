@@ -53,4 +53,38 @@ exports.delcar = (req, res) => {
 			data: car
 		});
 	});
-}
+};
+
+exports.updcar = (req, res) => {
+	let editCar = { regnr: req.body.regnrtoedit };
+	let editVal = () => {
+		switch(req.body.cars) {
+			case "regnr":
+				return { regnr: req.body.newvalue };
+			case "modell":
+				return { modell: req.body.newvalue };
+			case "imgsrc":
+				return { imgsrc: req.body.newvalue };
+			default:
+				return false;
+		}
+	};
+
+	if(!editVal) {
+		res.json({
+			error: "error",
+			message: "No valid data"
+		});
+	} else {
+		Cars.updateOne(editCar, editVal, function (err) {
+			if(err)
+				res.send(err);
+			else
+				res.json({
+					status: "success",
+					message: "Car updated successfully",
+					data: editCar
+				});
+		});
+	}
+};
