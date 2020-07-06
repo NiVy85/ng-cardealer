@@ -29,11 +29,14 @@ exports.view = (req,res) => {
 	});
 };
 
-exports.addcar = (req, res) => {
-	if (!req.body) {
-		res.status(400).send({message: "No empty fields allowed!"});
-		return;
-	}
-	const carsCollection = mongoose.collection('cars');
-	carsCollection.insertOne(req.body);
+exports.addcar = (req, res, next) => {
+	let car = new Cars({
+		regnr: req.body.regnr,
+		modell: req.body.modell,
+		imgsrc: req.body.imgsrc
+	});
+	car.save(function (err, car) {
+		if (err) {return next(err)}
+		res.json(201,car);
+	})
 };
