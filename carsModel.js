@@ -9,7 +9,7 @@ const carsSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
-	img: {
+	imgsrc: {
 		type: String,
 		required: true
 	}

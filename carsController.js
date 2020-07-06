@@ -28,3 +28,27 @@ exports.view = (req,res) => {
 			});
 	});
 };
+
+exports.addcar = (req, res) => {
+	if (!req.body.regnr && !req.body.modell && !req.body.imgsrc) {
+		res.status(400).send({message: "No empty fields allowed!"});
+		return;
+	}
+
+	const newCar = new Cars({
+		regnr: req.body.regnr,
+		modell: req.body.modell,
+		imgsrc: req.body.imgsrc
+	});
+
+	newCar
+		.save(newCar)
+		.then(data => {
+			res.send(data);
+		})
+		.catch(err => {
+			res.status(500).send({
+				message: err.message || "Error occured when creating new car."
+			});
+		});
+};

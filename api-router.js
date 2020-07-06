@@ -12,6 +12,10 @@ router.route('/api/cars')
 router.route('/api/cars/:cars_id')
 	.get(carsController.view);
 
+route.route('/api/cars')
+	.post(carsController.newCar);
+
+
 router.get('*', (req, res) => {
 	res.redirect('https://angular-cardealer.herokuapp.com');
 });
