@@ -61,18 +61,17 @@ exports.updcar = (req, res) => {
 	let editVal;
 		switch(select["value"]) {
 			case "regnr":
-				this.editVal = { regnr: req.body.newvalue };
+				editVal = { regnr: req.body.newvalue };
 				break;
 			case "modell":
-				this.editVal = { modell: req.body.newvalue };
+				editVal = { modell: req.body.newvalue };
 				break;
 			case "imgsrc":
-				this.editVal = { imgsrc: req.body.newvalue };
+				editVal = { imgsrc: req.body.newvalue };
 				break;
 			default:
 				return false;
 		}
-  res.send({data: editVal});
 	if(!editVal) {
 		res.json({
 			error: "error",
