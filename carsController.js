@@ -42,10 +42,6 @@ exports.addcar = (req, res, next) => {
 };
 
 exports.delcar = (req, res) => {
-	let car = {
-		regnr: req.body.regnr-del
-	}
-	Cars.deleteOne(car, function (err) {
-		if(err) return handleError(err);
-	});
+	let car = { regnr: req.body.regnrdel};
+	Cars.find(car).remove().exec();
 }
