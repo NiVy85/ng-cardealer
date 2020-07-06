@@ -57,6 +57,7 @@ exports.delcar = (req, res) => {
 
 exports.updcar = (req, res) => {
 	let editCar = { regnr: req.body.regnrtoedit };
+	res.send({ value: req.body.cars });
 	let editVal = (req) => {
 		switch(req.body.cars) {
 			case "regnr":
