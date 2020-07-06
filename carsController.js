@@ -1,3 +1,5 @@
+const {element} = require('protractor');
+
 Cars = require('./carsModel');
 
 exports.index = (req, res) => {
@@ -43,6 +45,11 @@ exports.addcar = (req, res, next) => {
 
 exports.delcar = (req, res) => {
 	let car = { regnr: req.body.regnrdel};
+	staticCars = ["ARG678", "TTY199", "KLI082", "UUP123", "WLK131", "SLP764"];
+	staticCars.forEach( element => {
+		if(car == element)
+			return {error: "error", message: "Not allowed to remove that car"};
+	});
 	Cars.find(car).remove((err) => {
 		if(err)
 			res.send(err)
