@@ -8,13 +8,15 @@ import { CarsComponent } from './cars/cars.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         CarsComponent,
-        AboutComponent
+        AboutComponent,
+        EditorComponent
     ],
     imports: [
         BrowserModule,
