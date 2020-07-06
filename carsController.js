@@ -30,12 +30,12 @@ exports.view = (req,res) => {
 };
 
 exports.addcar = (req, res) => {
-	if (!req.body.regnr && !req.body.modell && !req.body.imgsrc) {
-		res.status(400).send({message: "No empty fields allowed!", data:  req.body.regnr});
+	if (!req.body.regnr) {
+		res.status(400).send({message: "No empty fields allowed!"});
 		return;
 	}
 
-	const newCar = new Cars({
+	const newCar = new Cars.cars({
 		regnr: req.body.regnr,
 		modell: req.body.modell,
 		imgsrc: req.body.imgsrc
