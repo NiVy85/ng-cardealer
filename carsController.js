@@ -57,19 +57,22 @@ exports.delcar = (req, res) => {
 
 exports.updcar = (req, res) => {
 	let editCar = { regnr: req.body.regnrtoedit };
-	res.send({ value: req.body.cars });
-	let editVal = (req) => {
-		switch(req.body.cars) {
+	let select = { value: req.body.cars };
+	let editVal = "";
+		switch(select.value) {
 			case "regnr":
-				return { regnr: req.body.newvalue };
+				editVal = { regnr: req.body.newvalue };
+				break;
 			case "modell":
-				return { modell: req.body.newvalue };
+				editVal = { modell: req.body.newvalue };
+				break;
 			case "imgsrc":
-				return { imgsrc: req.body.newvalue };
+				editVal = { imgsrc: req.body.newvalue };
+				break;
 			default:
 				return false;
 		}
-	};
+
 
 	if(!editVal) {
 		res.json({
