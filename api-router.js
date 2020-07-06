@@ -13,7 +13,7 @@ router.route('/api/cars/:cars_id')
 	.get(carsController.view);
 
 router.route('/api/cars')
-	.post(carsController.newCar);
+	.post(carsController.addcar);
 
 
 router.get('*', (req, res) => {
