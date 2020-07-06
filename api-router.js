@@ -12,7 +12,7 @@ router.route('/api/cars')
 router.route('/api/cars/:cars_id')
 	.get(carsController.view);
 
-route.route('/api/cars')
+router.route('/api/cars')
 	.post(carsController.newCar);
 
 
