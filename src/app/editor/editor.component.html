@@ -6,3 +6,21 @@
 		<button type="submit">Lägg till</button>
 	</form>
 </div>
+<div class="_editcar-form">
+	<form action="/api/cars/update" method="POST">
+		<input type="text" placeholder="Regnr på bil som ska redigeras" name="regnr-toedit">
+		<select name="cars" id="cars">
+			<option value="regnr">Regnr</option>
+			<option value="modell">Modell</option>
+			<option value="imgsrc">Bild url</option>
+		</select>
+		<input type="text" placeholder="Nytt värde" name="new-value">
+		<button type="submit">Ändra</button>
+	</form>
+</div>
+<div class="_delcar-form">
+	<form action="/api/cars/del" method="POST">
+		<input type="text" placeholder="Regnr" name="regnr-del">
+		<button type="submit">Ta bort</button>
+	</form>
+</div>

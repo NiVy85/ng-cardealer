@@ -40,3 +40,12 @@ exports.addcar = (req, res, next) => {
 		res.json(201,car);
 	})
 };
+
+exports.delcar = (req, res) => {
+	let car = {
+		regnr: req.body.regnr-del
+	}
+	Cars.deleteOne(car, function (err) {
+		if(err) return handleError(err);
+	});
+}

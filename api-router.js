@@ -15,6 +15,8 @@ router.route('/api/cars/:cars_id')
 router.route('/api/cars')
 	.post(carsController.addcar);
 
+router.route('/api/cars/del')
+	.post(carsController.delete);
 
 router.get('*', (req, res) => {
 	res.redirect('https://angular-cardealer.herokuapp.com');
