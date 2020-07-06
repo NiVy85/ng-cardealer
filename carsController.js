@@ -59,7 +59,7 @@ exports.updcar = (req, res) => {
 	let editCar = { regnr: req.body.regnrtoedit };
 	let select = { value: req.body.cars };
 	let editVal;
-		switch(select.keys(value)[0]) {
+		switch(select["value"]) {
 			case "regnr":
 				editVal = { regnr: req.body.newvalue };
 				break;
