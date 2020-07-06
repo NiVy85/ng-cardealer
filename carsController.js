@@ -72,7 +72,7 @@ exports.updcar = (req, res) => {
 			default:
 				return false;
 		}
-
+  res.send({data: editVal});
 	if(!editVal) {
 		res.json({
 			error: "error",
