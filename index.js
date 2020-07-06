@@ -8,7 +8,7 @@ const db_uri = 'mongodb+srv://mili018:BAc3w2Gg6iuT@mili.qa54w.gcp.mongodb.net/ca
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
+mongoose.Promise = global.Promise;
 // Connect to Database
 mongoose.connect(db_uri, { useNewUrlParser: true, useUnifiedTopology: true });
 

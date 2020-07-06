@@ -30,25 +30,10 @@ exports.view = (req,res) => {
 };
 
 exports.addcar = (req, res) => {
-	if (!req.body.regnr) {
+	if (!req.body) {
 		res.status(400).send({message: "No empty fields allowed!"});
 		return;
 	}
-
-	const newCar = new Cars.cars({
-		regnr: req.body.regnr,
-		modell: req.body.modell,
-		imgsrc: req.body.imgsrc
-	});
-
-	newCar
-		.save(newCar)
-		.then(data => {
-			res.send(data);
-		})
-		.catch(err => {
-			res.status(500).send({
-				message: err.message || "Error occured when creating new car."
-			});
-		});
+	const carsCollection = mongoose.collection('cars');
+	carsCollection.insertOne(req.body);
 };
