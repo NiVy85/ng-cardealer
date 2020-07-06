@@ -83,7 +83,7 @@ exports.updcar = (req, res) => {
 				res.json({
 					status: "success",
 					message: "Car updated successfully",
-					data: editCar
+					data: editVal
 				});
 		});
 	}
