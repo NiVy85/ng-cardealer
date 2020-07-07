@@ -6,7 +6,7 @@ $primary: rgb(85, 85, 170);
 
 .outer-container {
 	display: grid;
-	grid-template-rows: fit-content(300px) 1fr fit-content(250px);
+	grid-template-rows: fit-content(350px) 1fr fit-content(250px);
 	min-height: 100vh;
 }
 
